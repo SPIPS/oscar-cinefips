@@ -95,7 +95,7 @@ class Api extends CI_Controller {
 		$query->closeCursor();
 		if($res == NULL || !$res || count($res) < 1){
 			$query = $PDO->prepare('INSERT INTO cinefips_oscars_vote VALUES(?, ?, ?)');
-			$query->execute(array($this->session->userdate('login'), $cat, $vid))or die(json_encode(array('code' => 0, 'error' => 'error sql insert new datas', 'data' => null)));;
+			$query->execute(array($this->session->userdata('login'), $cat, $vid))or die(json_encode(array('code' => 0, 'error' => 'error sql insert new datas', 'data' => null)));;
 			$query->closeCursor();
 			$return = array('code' => 1, 'error' => null, 'data' => null);
 			echo json_encode($return);
