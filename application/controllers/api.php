@@ -88,7 +88,6 @@ class Api extends CI_Controller {
 			echo json_encode($return);
 			die();
 		}
-		die($this->session->userdata('session_id'));
 		$PDO = connectSQL();
 		$query = $PDO->prepare('SELECT * FROM cinefips_oscars_vote WHERE login = ? AND categorie = ?');
 		$query->execute(array($this->session->userdata('login'), $cat)) or die(json_encode(array('code' => 0, 'error' => 'error sql select old datas', 'data' => null)));
