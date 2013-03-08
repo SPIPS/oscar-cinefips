@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -38,17 +39,34 @@
 
   <body>
 
-	<div class="row">
-		<div class="span8">
-			<img src="img/banniere2.png" alt=""/>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-inner">
+		<div class="container-fluid">
+		  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="brand" href="#">Project name</a>
+		  <div class="nav-collapse collapse">
+			<p class="navbar-text pull-right">
+			  Logged in as <a href="#" class="navbar-link">Username</a>
+			</p>
+			<ul class="nav">
+			  <li class="active"><a href="#">Home</a></li>
+			  <li><a href="#about">About</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			</ul>
+		  </div><!--/.nav-collapse -->
 		</div>
+	  </div>
 	</div>
 
 	<div class="container-fluid">
 	  <div class="row-fluid">
 		<div class="span3">
-		  <div class="well sidebar-nav " >
-			<ul class="nav nav-list bs-docs-sidenav affix-top" data-spy="affix">
+		  <div class="well sidebar-nav">
+			<ul class="nav nav-list">
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
 			  <li class="active"><a href="#">Meilleur Film</a></li>
@@ -69,11 +87,11 @@
 		  </div><!--/.well -->
 		</div><!--/span-->
 		<div class="span9">
-		
-		<?php if(false == $this->session->userdata('login')){ ?>
-		<a href="<?php echo base_url();?>login">Connexion à Cinefips via Adonis upsud</a>
-		<?php } else { ?>
-		Welcome scumbag <strong><?php echo $user; ?></strong>! check our videos bitch
+		  <div class="hero-unit">
+			<h1>Hello, world!</h1>
+			<p>Connectez-vous pour voter aux oscars Cinefips BIATCHSSS.</p>
+			<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">CONNECT &raquo;</a></p>
+		  </div>
 		  <ul class="thumbnails">
 			<li>
 			  <div class="thumbnail">
@@ -84,30 +102,35 @@
 			</li>
 			<li>
 			  <div class="thumbnail">
-				<h3>Meutre au Manoir</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/TW5qj8s5y3Y" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Ambre Verdaguer / Marion Dequidt / Pierre Liffran<br />Acteurs: Arnaud / Fabian / Julia / Marion / Ambre / Pierre / Luc</p>
+				<h3>Concours Dunod</h3>
+				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
 			  </div>
 			</li>
 			<li>
 			  <div class="thumbnail">
 				<h3>Concours Dunod</h3>
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Valentin Roux</p>
+				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
 			  </div>
 			</li>
 			<li>
 			  <div class="thumbnail">
 				<h3>Concours Dunod</h3>
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Valentin Roux</p>
+				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
 			  </div>
 			</li>
-		  </ul>
+			<li>
+			  <div class="thumbnail">
+				<h3>Concours Dunod</h3>
+				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
+			  </div>
+			</li>
+		</ul>
+
 		</div><!--/span-->
-		<pre><?php var_export($cat);?></pre>
-		  <pre><?php var_export($videos); ?></pre>
-	<?php } ?>
 	  </div><!--/row-->
 
 	  <hr>
