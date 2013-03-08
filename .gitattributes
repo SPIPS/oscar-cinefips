@@ -1,5 +1,6 @@
 * text eol=lf
 
+*.png	 text eol=auto
 *.cs     text diff=csharp
 *.java   text diff=java
 *.html   text diff=html eol=lf
