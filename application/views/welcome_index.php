@@ -68,14 +68,12 @@
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-                  <?php
-if(false == $this->session->userdata('login')){
-?>
-    <a href="<?php echo base_url();?>login">Connexion à Cinefips via Adonis upsud</a>
-    <?php } else { ?>
-    Welcome scumbag <strong><?php echo $user; ?></strong>! check our videos bitch
-          
         <div class="span9">
+        
+        <?php if(false == $this->session->userdata('login')){ ?>
+        <a href="<?php echo base_url();?>login">Connexion à Cinefips via Adonis upsud</a>
+        <?php } else { ?>
+        Welcome scumbag <strong><?php echo $user; ?></strong>! check our videos bitch
           <ul class="thumbnails">
             <li>
               <div class="thumbnail">
