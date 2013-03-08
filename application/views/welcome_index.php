@@ -44,68 +44,97 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">SPIPS</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+    <div class="row">
+        <div class="span8">
+            <img src="img/banniere2.png">
         </div>
-      </div>
     </div>
 
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+          <div class="well sidebar-nav " >
+            <ul class="nav nav-list bs-docs-sidenav affix-top" data-spy="affix">
+              <li class="nav-header"><a href="Les Oscars de CinéFIPS.htm">Acceuil</a></li>
+              <li class="nav-header">Catégories</li>
+              <li class="active"><a href="Meilleur_Film.html">Meilleur Film</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Réalisateur</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Actrice</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Acteur</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Espoir Féminin</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Espoir Masculin</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Premier Film</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Scenario Original</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Montage</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Effet Visuel</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Vidéo Evènement</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Pub</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Teaser</a></li>
+              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Guest</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
-          <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-          </div>
-          <?php
+                  <?php
 if(false == $this->session->userdata('login')){
 ?>
     <a href="<?php echo base_url();?>login">Connexion à Cinefips via Adonis upsud</a>
     <?php } else { ?>
     Welcome scumbag <strong><?php echo $user; ?></strong>! check our videos bitch
-          <pre><?php var_export($cat);?></pre>
+          
+        <div class="span9">
+          <ul class="thumbnails">
+            <li>
+              <div class="thumbnail">
+                <h3>Concours Dunod</h3>
+                <iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+                <p>Réalisateur: Pierre Liffran</br>Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
+              </div>
+            </li>
+            <li>
+              <div class="thumbnail">
+                <h3>Meutre au Manoir</h3>
+                <iframe width="450" height="260" src="http://www.youtube.com/embed/TW5qj8s5y3Y" frameborder="0" allowfullscreen></iframe>
+                <p>Réalisateur: Ambre Verdaguer / Marion Dequidt / Pierre Liffran</br>Acteurs: Arnaud / Fabian / Julia / Marion / Ambre / Pierre / Luc</p>
+              </div>
+            </li>
+            <li>
+              <div class="thumbnail">
+                <h3>Concours Dunod</h3>
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+                <p>Réalisateur: Pierre Liffran</br>Acteurs: Guillaume Le Page / Valentin Roux</p>
+              </div>
+            </li>
+            <li>
+              <div class="thumbnail">
+                <h3>Concours Dunod</h3>
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
+                <p>Réalisateur: Pierre Liffran</br>Acteurs: Guillaume Le Page / Valentin Roux</p>
+              </div>
+            </li>
+          </ul>
+        </div><!--/span-->
+        <pre><?php var_export($cat);?></pre>
           <pre><?php var_export($videos); ?></pre>
     <?php } ?>
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>© Powered by the <img src="img/SPIPS.png" style="height:20px;"/>SPIPS<img src="img/SPIPS.png" style="height:20px;"/></p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+  
+
         </div><!--/span-->
       </div><!--/row-->
 
