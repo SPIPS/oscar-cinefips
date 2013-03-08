@@ -46,12 +46,14 @@ class Login extends CI_Controller {
 				$query = $PDO->prepare('INSERT INTO cinefips_oscars_users VALUES(?, ?)');
 				$query->execute(array($this->session->userdata('login'), $this->session->userdata('session_id'))) or die($query->errorInfo());
 				$query->closeCursor();
-				die("inserted!");
+				redirect(base_url(), 'location', 302);
+				die();
 			    } else {
 				$query = $PDO->prepare('UPDATE cinefips_oscars_users SET session_id = ? WHERE login = ?');
 				$query->execute(array($this->session->userdata('session_id'), $this->session->userdata('login'))) or die($query->errorInfo());
 				$query->closeCursor();
-				die("updated!");
+				redirect(base_url(), 'location', 302);
+				die();
 			    }
 		    } else {
 			    die("aucun session id");
