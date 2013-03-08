@@ -46,10 +46,14 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="brand" href="#">Project name</a>
+		  <a class="brand" href="#">Oscars</a>
 		  <div class="nav-collapse collapse">
 			<p class="navbar-text pull-right">
-			  Logged in as <a href="#" class="navbar-link">Username</a>
+				<?php if(false == $this->session->userdata('login')){ ?>
+				<a href="<?php echo base_url(); ?>login">Connectez-vous</a>
+				<?php } else { ?>
+			  	Connecté en tant que <strong><?php echo $user; ?></strong>
+			  	<?php } ?>
 			</p>
 			<ul class="nav">
 			  <li class="active"><a href="#">Home</a></li>
@@ -86,11 +90,13 @@
 		  </div><!--/.well -->
 		</div><!--/span-->
 		<div class="span9">
-		  <div class="hero-unit">
-			<h1>Hello, world!</h1>
-			<p>Connectez-vous pour voter aux oscars Cinefips BIATCHSSS.</p>
-			<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">CONNECT &raquo;</a></p>
-		  </div>
+			<?php if(false == $this->session->userdata('login')){ ?>
+		  	<div class="hero-unit">
+				<h1>Hello, world!</h1>
+				<p>Connectez-vous pour voter aux oscars Cinefips BIATCHSSS.</p>
+				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">CONNECT &raquo;</a></p>
+		  	</div>
+     		<?php } ?>
 		  <ul class="thumbnails">
 			<li>
 			  <div class="thumbnail">
