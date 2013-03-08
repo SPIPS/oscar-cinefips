@@ -40,7 +40,7 @@
 
     <div class="row">
         <div class="span8">
-            <img src="img/banniere2.png">
+            <img src="img/banniere2.png" />
         </div>
     </div>
 
@@ -52,19 +52,19 @@
               <li class="nav-header"><a href="Les Oscars de CinéFIPS.htm">Acceuil</a></li>
               <li class="nav-header">Catégories</li>
               <li class="active"><a href="Meilleur_Film.html">Meilleur Film</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Réalisateur</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Actrice</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Acteur</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Espoir Féminin</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Espoir Masculin</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Premier Film</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Scenario Original</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Montage</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Effet Visuel</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Vidéo Evènement</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleure Pub</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Teaser</a></li>
-              <li><a href="./Les Oscars de CinéFIPS_files/Les Oscars de CinéFIPS.htm">Meilleur Guest</a></li>
+              <li><a href="#">Meilleur Réalisateur</a></li>
+              <li><a href="#">Meilleure Actrice</a></li>
+              <li><a href="#">Meilleur Acteur</a></li>
+              <li><a href="#">Meilleur Espoir Féminin</a></li>
+              <li><a href="#">Meilleur Espoir Masculin</a></li>
+              <li><a href="#">Meilleur Premier Film</a></li>
+              <li><a href="#">Meilleur Scenario Original</a></li>
+              <li><a href="#">Meilleur Montage</a></li>
+              <li><a href="#">Meilleur Effet Visuel</a></li>
+              <li><a href="#">Meilleure Vidéo Evènement</a></li>
+              <li><a href="#">Meilleure Pub</a></li>
+              <li><a href="#">Meilleur Teaser</a></li>
+              <li><a href="#">Meilleur Guest</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -115,7 +115,7 @@ if(false == $this->session->userdata('login')){
       <hr>
 
       <footer>
-        <p>© Powered by the <img src="<?php echo base_url(); ?>img/SPIPS.png" style="height:20px;"/>SPIPS<img src="<?php echo base_url(); ?>img/SPIPS.png" style="height:20px;"/></p>
+        <p>© Powered by the <img src="<?php echo base_url(); ?>img/SPIPS.png" style="height:20px;" alt=""/>SPIPS<img src="<?php echo base_url(); ?>img/SPIPS.png" style="height:20px;" alt=""/></p>
       </footer>
 
     </div><!--/.fluid-container-->
