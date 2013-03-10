@@ -58,11 +58,8 @@
 			<h2 class="form-signin-heading">Connectez-vous avec Adonis</h2>
 			<input type="text" class="input-block-level" name="login" style="width: 300px; margin-right: 10px;" placeholder="prenom.nom" />
 			<span style="position: relative;top: -8px;">@u-psud.fr</span>
-			<input type="password" class="input-block-level" name="password" placeholder="password adonis">
-			<label class="checkbox">
-			  <input type="checkbox" disabled="disabled" value="remember-me"> Remember me
-			</label>
-			<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+			<input type="password" class="input-block-level" name="password" placeholder="password adonis - adresse u-psud.fr">
+			<button class="btn btn-large btn-primary" type="submit">Se connecter</button>
 		  </form>
 
 		</div> <!-- /container -->
