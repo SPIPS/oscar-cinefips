@@ -99,7 +99,7 @@
 		  <ul class="thumbnails">
 		  	<?php foreach($videos as $v){ ?>
 			<li>
-			  <div class="thumbnail" style="width:470px;">
+			  <div class="thumbnail">
 				<h3><?php echo $v['nom']; ?></h3>
 				<?php echo $v['iframe']; ?>
 				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
