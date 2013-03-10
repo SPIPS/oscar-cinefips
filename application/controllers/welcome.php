@@ -3,32 +3,61 @@ include("_config.php");
 class Welcome extends CI_Controller {
 	public function index()
 	{
-		if($this->isConnected()){
-			$PDO = connectSQL();
-			$query = $PDO->query('SELECT * FROM cinefips_oscars_categories');
-			$cat = $query->fetchAll();
-			$query->closeCursor();
-			$query = $PDO->query('SELECT * FROM cinefips_oscars_videos');
-			$videos = $query->fetchAll();
-			$query->closeCursor();
-			$query = $PDO->query('SELECT * FROM cinefips_oscars_vote');
-			$vote = $query->fetchAll();
-			$query->closeCursor();
+		$PDO = connectSQL();
+		$query = $PDO->query('SELECT * FROM cinefips_oscars_categories');
+		$cat = $query->fetchAll();
+		$query->closeCursor();
+		$query = $PDO->query('SELECT * FROM cinefips_oscars_videos');
+		$videos = $query->fetchAll();
+		$query->closeCursor();
+		$query = $PDO->query('SELECT * FROM cinefips_oscars_vote');
+		$vote = $query->fetchAll();
+		$query->closeCursor();
+		foreach($videos as &$v){
+			$v['vote'] = 0;
+		}
+		foreach($vote as $key => $value){
 			foreach($videos as &$v){
-				$v['vote'] = 0;
-			}
-			foreach($vote as $key => $value){
-				foreach($videos as &$v){
-					if($value['video'] == $v['id']){
-						$v['vote']++; break;
-					}
+				if($value['video'] == $v['id']){
+					$v['vote']++; break;
 				}
 			}
-			$this->load->view('welcome_index', array('videos'=>$videos, 'cat'=>$cat, 'user' => $this->session->userdata('login')));
-		} else {
-			$this->load->view('welcome_index');
 		}
-		
+		$this->load->view('welcome_index', array('videos'=>$videos, 'cat'=>$cat, 'user' => $this->session->userdata('login')));		
+	}
+
+	public function cat($cat){
+		if(!is_numeric($cat)){
+			die("catégorie non valide");
+		}
+		$active_cat = $cat;
+		if(false == ($query = $PDO->prepare('SELECT v.id, v.nom, v.iframe, v.realisateur, v.acteurs, v.description 
+			FROM cinefips_oscars_cat_vid AS cv, cinefips_oscars_videos AS v WHERE v.id = cv.video AND categorie = ?'))){
+			die();
+		}
+		if(false == ($query->execute(array($cat)))){
+			die();
+		}
+		$catvid = $query->fetchAll(PDO::FETCH_ASSOC);
+		$query = $PDO->query('SELECT * FROM cinefips_oscars_categories');
+		$cat = $query->fetchAll();
+		$query->closeCursor();
+		$query = $PDO->query('SELECT * FROM cinefips_oscars_vote');
+		$vote = $query->fetchAll();
+		$query->closeCursor();
+		foreach($catvid as &$v){
+			$v['vote'] = 0;
+		}
+		foreach($vote as $key => $value){
+			foreach($catvid as &$v){
+				if($value['video'] == $v['id']){
+					$v['vote']++; break;
+				}
+			}
+		}
+		$this->load->view('welcome_cat', array('videos'=>$catvid, 'active_cat'=>$active_cat, 'cat'=>$cat, 'user' => $this->session->userdata('login')));		
+
+
 	}
 	
 	private function isConnected(){
