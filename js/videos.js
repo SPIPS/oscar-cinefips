@@ -8,7 +8,7 @@ function refreshBoutonsMenus(){
 		if(data != null && data.code == 1){
 			$(".rb-navig li i").removeClass("icon-ok").addClass("icon-exclamation-sign");
 			$.each(data.data, function(key, value){
-				$("#cat-"+value.categorie).removeClass("icon-exclamation-sign").addClass("icon-ok");
+				$("#cat-"+value.categorie+" i").removeClass("icon-exclamation-sign").addClass("icon-ok");
 			});
 			//<i class="rb-icon pull-left icon-exclamation-sign"></i>
 			//.each(function(){
