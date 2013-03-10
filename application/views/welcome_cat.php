@@ -91,9 +91,8 @@
 		<div class="span9">
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
-				<h1>Hello, world!</h1>
-				<p>Connectez-vous pour voter aux oscars Cinefips BIATCHSSS.</p>
-				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">CONNECT &raquo;</a></p>
+				<p>N'oubliez pas de vous connectez pour voter :-)</p>
+				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Se connecter &raquo;</a></p>
 		  	</div>
      		<?php } ?>
 		  <ul class="thumbnails">
