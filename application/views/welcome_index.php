@@ -98,41 +98,16 @@
 		  	</div>
      		<?php } ?>
 		  <ul class="thumbnails">
+		  	<?php foreach($videos as $v){ ?>
 			<li>
 			  <div class="thumbnail">
-				<h3>Concours Dunod</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
+				<h3><?php echo $v['nom']; ?></h3>
+				<?php echo $v['iframe']; ?>
+				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
+				<p>Réalisateur: <?php echo $v['realisateur']; ?><br />Acteurs: <?php echo $v['acteurs']; ?></p>
 			  </div>
 			</li>
-			<li>
-			  <div class="thumbnail">
-				<h3>Concours Dunod</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
-			  </div>
-			</li>
-			<li>
-			  <div class="thumbnail">
-				<h3>Concours Dunod</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
-			  </div>
-			</li>
-			<li>
-			  <div class="thumbnail">
-				<h3>Concours Dunod</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
-			  </div>
-			</li>
-			<li>
-			  <div class="thumbnail">
-				<h3>Concours Dunod</h3>
-				<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>
-				<p>Réalisateur: Pierre Liffran<br />Acteurs: Guillaume Le Page / Luc Sarrat / Valentin Roux</p>
-			  </div>
-			</li>
+			<?php } ?>
 		</ul>
 
 		</div><!--/span-->
