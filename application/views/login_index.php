@@ -17,7 +17,7 @@
 		  }
 
 		  .form-signin {
-			max-width: 300px;
+			max-width: 400px;
 			padding: 19px 29px 29px;
 			margin: 0 auto 20px;
 			background-color: #fff;
@@ -56,7 +56,8 @@
 
 		  <form class="form-signin" action="<?php echo base_url(); ?>login/proceed" method="post">
 			<h2 class="form-signin-heading">Connectez-vous avec Adonis</h2>
-			<input type="text" class="input-block-level" name="login" placeholder="prenom.nom">@u-psud.fr
+			<input type="text" class="input-block-level" name="login" style="width: 300px; margin-right: 10px;" placeholder="prenom.nom" />
+			<span style="position: relative;top: -8px;">@u-psud.fr</span>
 			<input type="password" class="input-block-level" name="password" placeholder="password adonis">
 			<label class="checkbox">
 			  <input type="checkbox" disabled="disabled" value="remember-me"> Remember me
