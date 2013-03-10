@@ -31,6 +31,7 @@ class Welcome extends CI_Controller {
 			die("catégorie non valide");
 		}
 		$active_cat = $cat;
+		$PDO = connectSQL();
 		if(false == ($query = $PDO->prepare('SELECT v.id, v.nom, v.iframe, v.realisateur, v.acteurs, v.description 
 			FROM cinefips_oscars_cat_vid AS cv, cinefips_oscars_videos AS v WHERE v.id = cv.video AND categorie = ?'))){
 			die();
