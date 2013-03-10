@@ -74,7 +74,10 @@
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
 			  <?php foreach($cat as $c){ ?>
-			  <li<?php if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>><a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a></li>
+			  <li <?php echo ' id="cat-'.$c['id']; if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>>
+			  	<i class="rb-icon icon-exclamation-sign"></i>
+			  	<a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a>
+			  </li>
 			  <?php } ?>
 			</ul>
 		  </div><!--/.well -->
@@ -94,8 +97,13 @@
 				<h3><?php echo $v['nom']; ?></h3>
 				<?php echo $v['iframe']; ?>
 				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
-				<p>Réalisateur: <?php echo $v['realisateur']; ?><br />Acteurs: <?php echo $v['acteurs']; ?></p>
+				<p><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
+				<p class="vote" id="vote-<?php echo $v['id']; ?>">
+					<a class="btn btn-success" href="#"><i class="icon-thumbs-up icon-large"></i> Vote</a>
+				</p>
 			  </div>
+
+
 			</li>
 			<?php } ?>
 		</ul>
