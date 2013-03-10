@@ -79,7 +79,7 @@
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
 			  <?php foreach($cat as $c){ ?>
-			  <li <?php echo ' id="cat-'.$c['id'].'" _rb-id="'.$c['id'].'"'; if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>>
+			  <li <?php echo ' id="cat-'.$c['id'].'" _rb-id="'.$c['id'].'"'; ?>>
 			  	<i class="rb-icon pull-left icon-exclamation-sign"></i>
 			  	<a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a>
 			  </li>
@@ -90,24 +90,19 @@
 		<div class="span9">
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
-				<h1>Hello, world!</h1>
-				<p>Connectez-vous pour voter aux oscars Cinefips BIATCHSSS.</p>
-				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">CONNECT &raquo;</a></p>
+				<h1>Bonjour Polytechnicien(ne)s!</h1><br />
+				<p>Welcome to "Les Oscars de CineFIPS" !</p>
+				<p>La tâche qui vous incombe aujourd'hui est de voter pour chaque catégorie pour les vidéos qui vous ont le plus marqué durant ces deux années de vie associative, votre pouvoir est grand, alors utilisez le à bon escient :-)</p>
+				<p>Nous nous retrouverons le BLABLABLIBLABLABLA pour la céromonie officielle de remise des prix, alors à vos votes ;-)</p>
+				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Let's get started : se connecter pour voter &raquo;</a></p>
 		  	</div>
-     		<?php } ?>
-		  <ul class="thumbnails">
-		  	<?php foreach($videos as $v){ ?>
-			<li>
-			  <div class="thumbnail">
-				<h3><?php echo $v['nom']; ?></h3>
-				<?php echo $v['iframe']; ?>
-				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
-				<p>Réalisateur: <?php echo $v['realisateur']; ?><br />Acteurs: <?php echo $v['acteurs']; ?></p>
-			  </div>
-			</li>
-			<?php } ?>
-		</ul>
-
+     		<?php } else { ?>
+     		<div class="hero-unit" style="background-color:rgb(101, 247, 125);">
+				<h1>Congratulations!</h1><br />
+				<p>You're maintenant connecté !</p>
+				<p>Tu peux désormais naviguer entre les différentes catégories et voter :)</p>
+		  	</div>
+		  	<?php } ?>
 		</div><!--/span-->
 	  </div><!--/row-->
 
