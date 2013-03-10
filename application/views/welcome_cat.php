@@ -9,6 +9,7 @@
 
 	<!-- Le styles -->
 	<link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/font-awesome.min.css">
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
