@@ -105,7 +105,9 @@
 				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
 				<p><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
 				<p class="vote" id="vote-<?php echo $v['id']; ?>">
-					<button type="button" class="btn btn-success" href="#"><i class="icon-thumbs-up icon-large"></i> Vote</button>
+					<button type="button" class="btn btn-success" href="#" _rb-id-cat="<?php echo $active_cat; ?>" _rb-id-vid="<?php echo $v['id']; ?>">
+						<i class="icon-thumbs-up icon-large"></i> Vote
+					</button>
 				</p>
 			  </div>
 

@@ -1,5 +1,6 @@
 //$(window).load(function () {
   refreshBoutonsMenus();
+  bindBoutonsVote();
   //refreshBoutonsVote();
 //});
 
@@ -19,8 +20,20 @@ function refreshBoutonsMenus(){
 			//});
 		}
 	});
-	
+}
 
+function bindBoutonsVote()
+{
+	$(".thumbnail .vote .btn").click(function(){
+		$.getJSON('http://www.rbeuque74.fr/others/polytech/spips/oscar-cinefips/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
+			if(data.code != 1){
+				alert(data.error);
+				console.log(data);
+			} else {
+				refreshBoutonsMenus();
+			}
+		});
+	});
 }
 
 function refreshBoutonsVote(){
