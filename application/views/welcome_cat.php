@@ -21,6 +21,10 @@
 	  .rb-icon {
 	  	margin-top:5px;
 	  }
+	  
+	  .rb-navig {
+	  	min-width:222px;	  
+	  }
 
 	  @media (max-width: 980px) {
 		/* Enable use of floated navbar text */
@@ -72,7 +76,7 @@
 	<div class="container-fluid">
 	  <div class="row-fluid">
 		<div class="span3">
-		  <div class="well affix sidebar-nav">
+		  <div class="well rb-navig affix sidebar-nav">
 			<ul class="nav nav-list">
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
