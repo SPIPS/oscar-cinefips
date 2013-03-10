@@ -134,6 +134,26 @@ class Api extends CI_Controller {
 		}
 	}
 	
+	public function catVoted(){
+		if(!$this->isConnected()){
+			$return = array('code' => 0, 'error' => 'not connected', 'data' => null);
+			echo json_encode($return);
+			die();
+		}
+		$PDO = connectSQL();
+		$query = $PDO->prepare('SELECT v.categorie, v.video FROM cinefips_oscars_vote AS v, cinefips_oscars_categories AS c WHERE v.categorie = c.id AND v.login = ? AND v.categorie = ?');
+		$query->execute(array($this->session->userdata('login'), $cat)) or die(json_encode(array('code' => 0, 'error' => 'error sql select old datas', 'data' => null)));
+		$res = $query->fetchAll();
+		$query->closeCursor();
+		if($res == NULL || !$res || count($res) < 1){
+			$res = array();
+		}
+		$return = array('code' => 1, 'error' => null, 'data' => $res);
+		echo json_encode($return);
+		die();
+		
+	}
+	
 	private function isConnected(){
 		if($this->session->userdata('login')){
 			$PDO = connectSQL();
