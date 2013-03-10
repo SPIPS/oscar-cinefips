@@ -44,32 +44,21 @@
 
   <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="navbar-inner">
-		<div class="container-fluid">
-		  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="brand" href="#">Oscars</a>
-		  <div class="nav-collapse collapse">
-			<p class="navbar-text pull-right">
-				<?php if(false == $this->session->userdata('login')){ ?>
-				<a href="<?php echo base_url(); ?>login">Connectez-vous</a>
-				<?php } else { ?>
-			  	Connecté en tant que <strong><?php echo $user; ?></strong>
-			  	<?php } ?>
-			</p>
-			<ul class="nav">
-			  <li class="active"><a href="#">Home</a></li>
-			  <li><a href="#about">About</a></li>
-			  <li><a href="#contact">Contact</a></li>
-			</ul>
-		  </div><!--/.nav-collapse -->
+	<div class="container-fluid">
+	  <div class="row-fluid">
+		<div class="span10">
+			<img src="<?php echo base_url(); ?>img/banniere2.png" alt="" />
+		</div>
+		<div class="span2">
+			<?php if(false == $this->session->userdata('login')){ ?>
+			<a href="<?php echo base_url(); ?>login">Connectez-vous</a>
+			<?php } else { ?>
+		  	Connecté en tant que <strong><?php echo $user; ?></strong>
+		  	<?php } ?>
 		</div>
 	  </div>
 	</div>
+	
 
 	<div class="container-fluid">
 	  <div class="row-fluid">
