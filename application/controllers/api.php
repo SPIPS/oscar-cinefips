@@ -143,7 +143,7 @@ class Api extends CI_Controller {
 		$PDO = connectSQL();
 		$query = $PDO->prepare('SELECT v.categorie, v.video FROM cinefips_oscars_vote AS v, cinefips_oscars_categories AS c WHERE v.categorie = c.id AND v.login = ? AND v.categorie = ?');
 		$query->execute(array($this->session->userdata('login'), $cat)) or die(json_encode(array('code' => 0, 'error' => 'error sql select old datas', 'data' => null)));
-		$res = $query->fetchAll();
+		$res = $query->fetchAll(PDO::FETCH_ASSOC);
 		$query->closeCursor();
 		if($res == NULL || !$res || count($res) < 1){
 			$res = array();
