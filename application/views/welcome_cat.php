@@ -74,7 +74,7 @@
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
 			  <?php foreach($cat as $c){ ?>
-			  <li <?php echo ' id="cat-'.$c['id']; if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>>
+			  <li <?php echo ' id="cat-'.$c['id'].'"'; if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>>
 			  	<i class="rb-icon icon-exclamation-sign"></i>
 			  	<a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a>
 			  </li>
