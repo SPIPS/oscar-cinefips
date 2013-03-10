@@ -17,6 +17,9 @@
 	  .sidebar-nav {
 		padding: 9px 0;
 	  }
+	  .rb-icon {
+	  	margin-top:5px;
+	  }
 	  .rb-navig {
 	  	min-width:222px;	  
 	  }
@@ -76,7 +79,10 @@
 			  <li class="nav-header"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
 			  <li class="nav-header">Catégories</li>
 			  <?php foreach($cat as $c){ ?>
-			  <li><a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a></li>
+			  <li <?php echo ' id="cat-'.$c['id'].'"'; if( $c['id'] == $active_cat){ echo ' class="active" ';} ?>>
+			  	<i class="rb-icon pull-left icon-exclamation-sign"></i>
+			  	<a href="<?php echo base_url(); ?>welcome/cat/<?php echo $c['id']; ?>"><?php echo $c['nom']; ?></a>
+			  </li>
 			  <?php } ?>
 			</ul>
 		  </div><!--/.well -->

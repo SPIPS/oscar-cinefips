@@ -21,7 +21,6 @@
 	  .rb-icon {
 	  	margin-top:5px;
 	  }
-	  
 	  .rb-navig {
 	  	min-width:222px;	  
 	  }
