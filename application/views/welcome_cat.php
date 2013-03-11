@@ -48,7 +48,7 @@
 	<div class="navbar  navbar-fixed-top" >
 	  <div class="navbar-inner" style="height: 54px;">
 		<div class="container-fluid">
-		  <a class="brand" href="#" style="display: inline; margin-top: -7px;">Les Oscars de CineFIPS <img src="http://cinefips.bips-asso.fr/img/oscar.png" alt="" style="margin-left: 6px; display: inline;"></a>
+		  <a class="brand" href="<?php echo base_url(); ?>" style="display: inline; margin-top: -7px;">Les Oscars de CineFIPS <img src="http://cinefips.bips-asso.fr/img/oscar.png" alt="" style="margin-left: 6px; display: inline;"></a>
 		  <div class="nav-collapse collapse">
 			<p class="navbar-text pull-right">
 				<?php if(false == $this->session->userdata('login')){ ?>
