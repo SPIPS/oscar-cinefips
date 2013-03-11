@@ -77,12 +77,15 @@
 		  </div><!--/.well -->
 		</div><!--/span-->
 		<div class="span9">
+			<div style="text-align:center">
+		  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
+		  	</div>
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
 				<h1>Bonjour Polytechnicien(ne)s!</h1><br />
-				<p>Welcome to "Les Oscars de CineFIPS" !</p>
-				<p>La tâche qui vous incombe aujourd'hui est de voter pour chaque catégorie pour les vidéos qui vous ont le plus marqué durant ces deux années de vie associative, votre pouvoir est grand, alors utilisez le à bon escient :-)</p>
-				<p>Nous nous retrouverons le BLABLABLIBLABLABLA pour la céromonie officielle de remise des prix, alors à vos votes ;-)</p>
+				<p>Bienvenue sur le site officiel des Oscars de Cinéfips.</p>
+				<p>Vous pouvez voter pour nos films, acteurs ou actrices préférés et récompenser les talents de votre école.</p>
+				<p>Une cérémonie officielle sera organisée très prochainement à Polytech Paris-Sud pour décerner les fameuses statuettes tant convoitées, donc tenez-vous près !</p>
 				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Let's get started : se connecter pour voter &raquo;</a></p>
 		  	</div>
      		<?php } else { ?>
@@ -93,9 +96,6 @@
 		  	</div>
 		  	<?php } ?>
 		  	<br />
-		  	<div style="text-align:center">
-		  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
-		  	</div>
 		</div><!--/span-->
 	  </div><!--/row-->
 
