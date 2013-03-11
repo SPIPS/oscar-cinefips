@@ -11,7 +11,7 @@
 	<link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 	<style type="text/css">
 	  body {
-		padding-top: 60px;
+		padding-top: 10px;
 		padding-bottom: 40px;
 	  }
 	  .sidebar-nav {
@@ -46,7 +46,7 @@
 
 	<div class="container-fluid">
 	  <div class="row-fluid">
-		<div class="span10">
+		<div class="span10" style="text-align:center; margin-bottom:15px;">
 			<img src="<?php echo base_url(); ?>img/banniere2.png" alt="" />
 		</div>
 		<div class="span2">
