@@ -86,7 +86,7 @@
 				<h2>Bonjour Polytechnicien(ne)s!</h2><br />
 				<p>Bienvenue sur le site officiel des Oscars de Cinéfips.</p>
 				<p>Vous pouvez voter pour nos films, acteurs ou actrices préférés et récompenser les talents de votre école.</p>
-				<p>Une cérémonie officielle sera organisée très prochainement à Polytech Paris-Sud pour décerner les fameuses statuettes tant convoitées, donc tenez-vous près !</p>
+				<p>Une cérémonie officielle sera organisée le Mercredi 20 Mars 2013 à 18h dans l'amphi de la MDI pour décerner les fameuses statuettes tant convoitées, donc tenez-vous près !</p>
 				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Let's get started : se connecter pour voter &raquo;</a></p>
 		  	</div>
      		<?php } else { ?>
