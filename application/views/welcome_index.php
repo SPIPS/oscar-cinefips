@@ -90,7 +90,7 @@
 				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Let's get started : se connecter pour voter &raquo;</a></p>
 		  	</div>
      		<?php } else { ?>
-     		<div class="hero-unit" style="background-color:rgb(101, 247, 125);">
+     		<div class="hero-unit">
 			  	<h1 style="margin-top:-35px; text-align:center;">Les Oscars de Cinéfips</h1><br />
      			<div style="text-align:center; margin-bottom:15px;">
 			  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
