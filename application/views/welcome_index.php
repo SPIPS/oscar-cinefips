@@ -43,22 +43,22 @@
   </head>
 
   <body>
-
-	<div class="container-fluid">
-	  <div class="row-fluid">
-		<div class="span10" style="text-align:center; margin-bottom:15px;">
-			<img src="<?php echo base_url(); ?>img/banniere2.png" alt="" />
-		</div>
-		<div class="span2">
-			<?php if(false == $this->session->userdata('login')){ ?>
-			<button class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</button>
-			<?php } else { ?>
-		  	<button class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></button>
-		  	<?php } ?>
+  	<div class="navbar  navbar-fixed-top" >
+	  <div class="navbar-inner" style="height: 54px;">
+		<div class="container-fluid">
+		  <a class="brand" href="#" style="display: inline; margin-top: -7px;">Les Oscars de CineFIPS <img src="http://cinefips.bips-asso.fr/img/oscar.png" alt="" style="margin-left: 6px; display: inline;"></a>
+		  <div class="nav-collapse collapse">
+			<p class="navbar-text pull-right">
+				<?php if(false == $this->session->userdata('login')){ ?>
+				<button class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</button>
+				<?php } else { ?>
+			  	<button class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></button>
+			  	<?php } ?>
+			</p>
+		  </div>
 		</div>
 	  </div>
-	</div>
-	
+	</div>	
 
 	<div class="container-fluid">
 	  <div class="row-fluid">
