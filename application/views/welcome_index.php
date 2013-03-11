@@ -94,7 +94,7 @@
 		  	<?php } ?>
 		  	<br />
 		  	<div style="text-align:center">
-		  		<img src="<?php echo base_url();?>img/cinefips-mini.png" alt="" width="600" height="400" />
+		  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 		  	</div>
 		</div><!--/span-->
 	  </div><!--/row-->
