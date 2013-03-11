@@ -79,7 +79,7 @@
 		<div class="span9">
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
-		  		<h2 style="margin-top:-35px">Les Oscars de Cinéfips</h2><br />
+		  		<h2 style="margin-top:-35px; text-align:center;">Les Oscars de Cinéfips</h2><br />
 		  		<div style="text-align:center; margin-bottom:15px;">
 			  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 			  	</div>
@@ -91,7 +91,7 @@
 		  	</div>
      		<?php } else { ?>
      		<div class="hero-unit" style="background-color:rgb(101, 247, 125);">
-			  	<h2 style="margin-top:-35px">Les Oscars de Cinéfips</h2><br />
+			  	<h2 style="margin-top:-35px; text-align:center;">Les Oscars de Cinéfips</h2><br />
      			<div style="text-align:center; margin-bottom:15px;">
 			  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 			  	</div>
