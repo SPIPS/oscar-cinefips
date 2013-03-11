@@ -90,10 +90,19 @@
 		  	<?php foreach($videos as $v){ ?>
 			<li>
 			  <div class="thumbnail">
-				<h3><?php echo $v['nom']; ?></h3>
+			  	<?php $cat_spec = array(2,3,4,5,6,16);
+			  	if(in_array($active_cat, $cat_spec)){ ?>
+			  	<h3><?php echo $v['acteurs']; ?></h3>
+			  	<?php } else { ?> 
+			  	<h3><?php echo $v['nom']; ?></h3>
+			  	<?php } ?>
 				<?php echo $v['iframe']; ?>
 				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
-				<p><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
+				<?php if(in_array($active_cat, $cat_spec)){ ?>
+			  	<p><strong>Vidéo:</strong> <?php echo $v['nom']; ?><br /><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?></p>
+			  	<?php } else { ?> 
+			  	<p><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
+			  	<?php } ?>
 				<p class="vote" id="vote-<?php echo $v['id']; ?>">
 					<button type="button" class="btn btn-success" href="#" _rb-id-cat="<?php echo $active_cat; ?>" _rb-id-vid="<?php echo $v['id']; ?>">
 						<i class="icon-thumbs-up icon-large"></i> Vote
