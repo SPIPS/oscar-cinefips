@@ -79,6 +79,7 @@
 		  </div><!--/.well -->
 		</div><!--/span-->
 		<div class="span9">
+			<h2 style="text-align: center;" id="titreCategorieActive"></h2>
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
 				<p>N'oubliez pas de vous connectez pour voter :-)</p>
