@@ -91,14 +91,18 @@
 			<li>
 			  <div class="thumbnail">
 			  	<?php $cat_spec = array(2,3,4,5,6,16);
-			  	if(in_array($active_cat, $cat_spec)){ ?>
+			  	if($active_cat == 2){ ?>
+			  	<h3><?php echo $v['realisateur']; ?></h3>
+		  		<?php } elseif(in_array($active_cat, $cat_spec)){ ?>
 			  	<h3><?php echo $v['acteurs']; ?></h3>
 			  	<?php } else { ?> 
 			  	<h3><?php echo $v['nom']; ?></h3>
 			  	<?php } ?>
 				<?php echo $v['iframe']; ?>
 				<!--<iframe width="450" height="260" src="http://www.youtube.com/embed/CPl8kpbH66M" frameborder="0" allowfullscreen></iframe>-->
-				<?php if(in_array($active_cat, $cat_spec)){ ?>
+				<?php if($active_cat == 2){ ?>
+			  	<p><strong>Vidéo:</strong> <?php echo $v['nom']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
+		  		<?php } elseif(in_array($active_cat, $cat_spec)){ ?>
 			  	<p><strong>Vidéo:</strong> <?php echo $v['nom']; ?><br /><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?></p>
 			  	<?php } else { ?> 
 			  	<p><strong>Réalisateur:</strong> <?php echo $v['realisateur']; ?><br /><strong>Acteurs: </strong><?php echo $v['acteurs']; ?></p>
