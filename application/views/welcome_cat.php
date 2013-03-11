@@ -82,7 +82,7 @@
 			<h2 style="text-align: center;" id="titreCategorieActive"></h2>
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
-				<p>N'oubliez pas de vous connectez pour voter :-)</p>
+				<p>N'oubliez pas de vous connecter pour voter :-)</p>
 				<p><a href="<?php echo base_url(); ?>login/" class="btn btn-primary btn-large">Se connecter &raquo;</a></p>
 		  	</div>
      		<?php } ?>
