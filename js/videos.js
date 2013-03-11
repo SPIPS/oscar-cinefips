@@ -5,7 +5,7 @@
 //});
 
 function refreshBoutonsMenus(){
-	$.getJSON('http://www.rbeuque74.fr/others/polytech/spips/oscar-cinefips/api/catVoted', function(data){
+	$.getJSON('http://cinefips.bips-asso.fr/api/catVoted', function(data){
 		if(data != null && data.code == 1){
 			$(".rb-navig li i").removeClass("icon-ok").addClass("icon-exclamation-sign");
 			$.each(data.data, function(key, value){
@@ -25,7 +25,7 @@ function refreshBoutonsMenus(){
 function bindBoutonsVote()
 {
 	$(".thumbnail .vote .btn").click(function(){
-		$.getJSON('http://www.rbeuque74.fr/others/polytech/spips/oscar-cinefips/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
+		$.getJSON('http://cinefips.bips-asso.fr/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
 			if(data.code != 1){
 				alert(data.error);
 				console.log(data);
