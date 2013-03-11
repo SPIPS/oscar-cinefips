@@ -80,6 +80,7 @@
 			<div style="text-align:center; margin-bottom:15px;">
 		  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 		  	</div>
+		  	<h1>Les Oscars de Cinéfips</h1><br />
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
 				<h1>Bonjour Polytechnicien(ne)s!</h1><br />
