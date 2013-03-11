@@ -77,7 +77,7 @@
 		  </div><!--/.well -->
 		</div><!--/span-->
 		<div class="span9">
-			<div style="text-align:center">
+			<div style="text-align:center; margin-bottom:15px;">
 		  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 		  	</div>
 			<?php if(false == $this->session->userdata('login')){ ?>
