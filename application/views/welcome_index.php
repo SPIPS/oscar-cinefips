@@ -79,10 +79,10 @@
 		<div class="span9">
 			<?php if(false == $this->session->userdata('login')){ ?>
 		  	<div class="hero-unit">
+		  		<h2 style="margin-top:-35px">Les Oscars de Cinéfips</h2><br />
 		  		<div style="text-align:center; margin-bottom:15px;">
 			  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 			  	</div>
-			  	<h1>Les Oscars de Cinéfips</h1><br />
 				<h1>Bonjour Polytechnicien(ne)s!</h1><br />
 				<p>Bienvenue sur le site officiel des Oscars de Cinéfips.</p>
 				<p>Vous pouvez voter pour nos films, acteurs ou actrices préférés et récompenser les talents de votre école.</p>
@@ -91,10 +91,10 @@
 		  	</div>
      		<?php } else { ?>
      		<div class="hero-unit" style="background-color:rgb(101, 247, 125);">
+			  	<h2 style="margin-top:-35px">Les Oscars de Cinéfips</h2><br />
      			<div style="text-align:center; margin-bottom:15px;">
 			  		<img src="<?php echo base_url();?>img/cinefips-mini.jpg" alt="" width="600" height="400" />
 			  	</div>
-			  	<h1>Les Oscars de Cinéfips</h1><br />
 				<h1>Congratulations!</h1><br />
 				<p>You're maintenant connecté !</p>
 				<p>Tu peux désormais naviguer entre les différentes catégories et voter :)</p>
