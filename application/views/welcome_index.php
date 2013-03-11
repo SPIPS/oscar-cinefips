@@ -50,9 +50,9 @@
 		  <div class="nav-collapse collapse">
 			<p class="navbar-text pull-right">
 				<?php if(false == $this->session->userdata('login')){ ?>
-				<button class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</button>
+				<a class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</a>
 				<?php } else { ?>
-			  	<button class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></button>
+			  	<a class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></a>
 			  	<?php } ?>
 			</p>
 		  </div>
@@ -60,7 +60,7 @@
 	  </div>
 	</div>	
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top:20px;">
 	  <div class="row-fluid">
 		<div class="span3">
 		  <div class="well rb-navig affix sidebar-nav">

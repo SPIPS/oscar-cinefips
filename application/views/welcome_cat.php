@@ -45,34 +45,24 @@
 
   <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="navbar-inner">
+	<div class="navbar  navbar-fixed-top" >
+	  <div class="navbar-inner" style="height: 54px;">
 		<div class="container-fluid">
-		  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="brand" href="#">Oscars</a>
+		  <a class="brand" href="#" style="display: inline; margin-top: -7px;">Les Oscars de CineFIPS <img src="http://cinefips.bips-asso.fr/img/oscar.png" alt="" style="margin-left: 6px; display: inline;"></a>
 		  <div class="nav-collapse collapse">
 			<p class="navbar-text pull-right">
 				<?php if(false == $this->session->userdata('login')){ ?>
-				<a href="<?php echo base_url(); ?>login">Connectez-vous</a>
+				<a class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</a>
 				<?php } else { ?>
-			  	Connecté en tant que <strong><?php echo $user; ?></strong>
+			  	<a class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></a>
 			  	<?php } ?>
 			</p>
-			<ul class="nav">
-			  <li class="active"><a href="#">Home</a></li>
-			  <li><a href="#about">About</a></li>
-			  <li><a href="#contact">Contact</a></li>
-			</ul>
-		  </div><!--/.nav-collapse -->
+		  </div>
 		</div>
 	  </div>
-	</div>
+	</div>	
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top:20px">
 	  <div class="row-fluid">
 		<div class="span3">
 		  <div class="well rb-navig affix sidebar-nav">
