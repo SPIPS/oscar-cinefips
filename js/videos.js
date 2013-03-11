@@ -5,6 +5,7 @@
 //});
 
 function refreshBoutonsMenus(){
+	$("#titreCategorieActive").innerHTML($("li.active a").innerHTML());
 	$.getJSON('http://cinefips.bips-asso.fr/api/catVoted', function(data){
 		if(data != null && data.code == 1){
 			$(".rb-navig li i").removeClass("icon-ok").addClass("icon-exclamation-sign");
