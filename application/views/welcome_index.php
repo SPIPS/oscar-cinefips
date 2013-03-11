@@ -51,9 +51,9 @@
 		</div>
 		<div class="span2">
 			<?php if(false == $this->session->userdata('login')){ ?>
-			<a href="<?php echo base_url(); ?>login">Connectez-vous</a>
+			<button class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</button>
 			<?php } else { ?>
-		  	Connecté en tant que <strong><?php echo $user; ?></strong>
+		  	<button class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></button>
 		  	<?php } ?>
 		</div>
 	  </div>
