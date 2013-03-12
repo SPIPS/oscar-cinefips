@@ -23,7 +23,7 @@
 	  	margin-top:5px;
 	  }
 	  .rb-navig {
-	  	min-width:222px;	  
+	  	min-width:224px;	  
 	  }
 
 	  @media (max-width: 980px) {
