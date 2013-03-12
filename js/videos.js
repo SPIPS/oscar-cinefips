@@ -9,12 +9,21 @@ function refreshBoutonsMenus(){
 	$.getJSON('http://cinefips.bips-asso.fr/api/catVoted', function(data){
 		if(data != null && data.code == 1){
 			$(".rb-navig li i").removeClass("icon-ok").addClass("icon-exclamation-sign");
+			$(".thumbnail .vote .btn").each(function(){
+				if(!$(this).hasClass("btn-unvote")){
+					$(this).removeAttr("disabled").removeClass("disabled");
+				} else {
+					$(".btn-unvote").css("display", "none");
+				}
+			});
 			$.each(data.data, function(key, value){
 				$("#cat-"+value.categorie+" i").removeClass("icon-exclamation-sign").addClass("icon-ok");
 				if($("#cat-"+value.categorie).hasClass("active")){
 					$(".thumbnail .vote .btn").each(function(){
 						if(!$(this).hasClass("btn-unvote")){
 							$(this).attr("disabled", "disabled").addClass("disabled");
+						} else {
+							$(".btn-unvote").css("display", "inline-block");
 						}
 					});
 				}
@@ -38,7 +47,6 @@ function bindBoutonsVote()
 					console.log(data);
 				} else {
 					refreshBoutonsMenus();
-					$(".btn-unvote").css("display", "inline-block");
 				}
 			});
 		} else {
@@ -48,7 +56,6 @@ function bindBoutonsVote()
 					console.log(data);
 				} else {
 					refreshBoutonsMenus();
-					$(".btn-unvote").css("display", "none");
 				}
 			});
 		}
