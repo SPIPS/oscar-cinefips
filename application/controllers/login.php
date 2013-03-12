@@ -6,6 +6,14 @@ class Login extends CI_Controller {
 		$this->load->view('login_index');
 	}
 	
+	public function logout(){
+		$PDO = connectSQL();
+		$query = $PDO->prepare('DELETE FROM cinefips_oscars_users WHERE login = ?');
+		$query->execute(array($this->session->userdata('login')));
+		$this->session->sess_destroy();	
+		redirect(base_url(), 'location', 302);
+	}
+	
 	public function proceed()
 	{
 	    $connected = false;
