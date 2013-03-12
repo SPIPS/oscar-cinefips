@@ -106,6 +106,28 @@ class Api extends CI_Controller {
 			die();
 		}
 	}
+	
+	
+	
+	public function unvote($cat){
+		if(!$this->isConnected()){
+			$return = array('code' => 0, 'error' => 'not connected', 'data' => null);
+			echo json_encode($return);
+			die();
+		}
+		if(!is_numeric($cat)){
+			$return = array('code' => 0, 'error' => 'cat is not a integer', 'data' => null);
+			echo json_encode($return);
+			die();
+		}
+		$PDO = connectSQL();
+		$query = $PDO->prepare('DELETE FROM cinefips_oscars_vote WHERE login = ? AND categorie = ?');
+		$query->execute(array($this->session->userdata('login'), $cat)) or die(json_encode(array('code' => 0, 'error' => 'error sql delete datas', 'data' => null)));
+		$query->closeCursor();
+		$return = array('code' => 1, 'error' => null, 'data' => null);
+		echo json_encode($return);
+		die();
+	}
 
 	public function alreadyVoted($cat){
 		if(!$this->isConnected()){
