@@ -113,6 +113,9 @@
 					<button type="button" class="btn btn-success" href="#" _rb-id-cat="<?php echo $active_cat; ?>" _rb-id-vid="<?php echo $v['id']; ?>">
 						<i class="icon-thumbs-up icon-large"></i> Vote
 					</button>
+					<button type="button" style="display:none;" class="btn btn-mini btn-inverse btn-unvote" href="#" _rb-id-cat="<?php echo $active_cat; ?>" _rb-id-vid="<?php echo $v['id']; ?>">
+						<i class="icon-trash"></i> Retirer mon vote
+					</button>
 				</p>
 			  </div>
 
