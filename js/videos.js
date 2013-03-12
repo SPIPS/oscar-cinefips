@@ -25,7 +25,7 @@ function refreshBoutonsMenus(){
 
 function bindBoutonsVote()
 {
-	$("a#connected").click(function(){alert("BigUp ! y'a rien ici ^^ SPIPS <3 CineFIPS !");});
+	$("a#connected").click(function(){alert("BigUp !\n y'a rien ici ^^\n SPIPS <3 CineFIPS !");});
 	$(".thumbnail .vote .btn").click(function(){
 		$.getJSON('http://cinefips.bips-asso.fr/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
 			if(data.code != 1){
