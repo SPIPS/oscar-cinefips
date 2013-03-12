@@ -53,7 +53,7 @@
 				<?php if(false == $this->session->userdata('login')){ ?>
 				<a class="btn" href="<?php echo base_url(); ?>login">Connectez-vous</a>
 				<?php } else { ?>
-			  	<a class="btn" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></a>
+			  	<a class="btn" id="connected" href="#">Connecté en tant que <strong><?php echo $user; ?></strong></a>
 			  	<a class="btn btn-warning" href="<?php echo base_url(); ?>login/logout">Déconnexion</a>
 			  	<?php } ?>
 			</p>
