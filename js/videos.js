@@ -27,14 +27,27 @@ function bindBoutonsVote()
 {
 	$("a#connected").click(function(){alert("BigUp !\n y'a rien ici ^^\n SPIPS <3 CineFIPS !");});
 	$(".thumbnail .vote .btn").click(function(){
-		$.getJSON('http://cinefips.bips-asso.fr/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
-			if(data.code != 1){
-				alert(data.error);
-				console.log(data);
-			} else {
-				refreshBoutonsMenus();
-			}
-		});
+		if(!$(this).hasClass("btn-unvote")){
+			$.getJSON('http://cinefips.bips-asso.fr/api/vote/'+$(this).attr("_rb-id-cat")+'/'+$(this).attr("_rb-id-vid"), function(data){
+				if(data.code != 1){
+					alert(data.error);
+					console.log(data);
+				} else {
+					refreshBoutonsMenus();
+					$(".btn-unvote").css("display", "inline-block");
+				}
+			});
+		} else {
+			$.getJSON('http://cinefips.bips-asso.fr/api/unvote/'+$(this).attr("_rb-id-cat"), function(data){
+				if(data.code != 1){
+					alert(data.error);
+					console.log(data);
+				} else {
+					refreshBoutonsMenus();
+					$(".btn-unvote").css("display", "none");
+				}
+			});
+		}
 	});
 }
 
