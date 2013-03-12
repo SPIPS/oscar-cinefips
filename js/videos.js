@@ -12,7 +12,11 @@ function refreshBoutonsMenus(){
 			$.each(data.data, function(key, value){
 				$("#cat-"+value.categorie+" i").removeClass("icon-exclamation-sign").addClass("icon-ok");
 				if($("#cat-"+value.categorie).hasClass("active")){
-					$(".thumbnail .vote .btn").attr("disabled", "disabled").addClass("disabled");
+					$(".thumbnail .vote .btn").each(function(){
+						if(!$(this).hasClass("btn-unvote")){
+							$(this).attr("disabled", "disabled").addClass("disabled");
+						}
+					});
 				}
 			});
 			//<i class="rb-icon pull-left icon-exclamation-sign"></i>
